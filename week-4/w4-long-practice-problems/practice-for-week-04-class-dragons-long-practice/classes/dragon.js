@@ -1,4 +1,21 @@
-// Your code here
+class Dragon {
+  constructor(name, color) {
+    this.name = name;
+    this.color = color;
+  };
+
+  breathesFire() {
+    return `${this.name} breathes fire everywhere! BURN!!!!`;
+  };
+
+  static getDragons(...array) {
+    let result = [];
+    array.forEach(el => result.push(el.name));
+    return result;
+  };
+}
+
+module.exports = Dragon;
 
 /****************************************************************************/
 /******************* DO NOT EDIT CODE BELOW THIS LINE ***********************/
