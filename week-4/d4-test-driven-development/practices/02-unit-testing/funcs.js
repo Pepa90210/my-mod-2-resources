@@ -1,12 +1,10 @@
 function isFive(num) {
-  if (num === 5) return true;
-  else return false;
+  return num === 5;
 }
 
 function isOdd(number) {
-  if (typeof number !== 'number') throw new Error('Invalid')
-  else if (number % 2 === 0) return false;
-  else return true;
+  if (typeof number !== 'number') throw new Error();
+  return number % 2 !== 0;
 }
 
 function myRange(min, max, step = 1) {
