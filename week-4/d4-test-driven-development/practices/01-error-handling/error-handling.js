@@ -32,11 +32,6 @@
 
 // try {
 //   sayName("Alex");
-// } catch (error) {
-//   console.error(error.message)
-// }
-
-// try {
 //   sayName(1);
 // } catch (error) {
 //   console.error(error.message)
