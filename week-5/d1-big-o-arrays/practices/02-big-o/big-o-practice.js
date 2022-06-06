@@ -1,3 +1,44 @@
+animals = ['alligator', 'bear', 'cat', 'dog', 'elephant', 'fish', 'goose', 'hamster', 'iguana', 'jaguar', 'kangaroo'];
+
+// Count how many animals are in the list
+// Time complexity: O(?)
+// Space complexity: O(?)
+function countAnimals(animals) {
+  let count = 0;
+  for (let i = 0 ; i < animals.length ; i++) {
+    count++;
+  }
+  return count;
+}
+
+// Count how many animals are in the list
+// Time complexity: O(?)
+// Space complexity: O(?)
+function countAnimals2(animals) {
+  return animals.length;
+}
+
+// Print the first 10 animals in the list
+// Time complexity: O(?)
+// Space complexity: O(?)
+function printTenAnimals(animals) {
+  if (animals.length < 10) {
+    throw Error("not enough animals")
+  }
+
+  console.log(animals[0]);
+  console.log(animals[1]);
+  console.log(animals[2]);
+  console.log(animals[3]);
+  console.log(animals[4]);
+  console.log(animals[5]);
+  console.log(animals[6]);
+  console.log(animals[7]);
+  console.log(animals[8]);
+  console.log(animals[9]);
+}
+
+// Print out all the animals
 // Time complexity: O(?)
 // Space complexity: O(?)
 function printAnimals(animals) {
