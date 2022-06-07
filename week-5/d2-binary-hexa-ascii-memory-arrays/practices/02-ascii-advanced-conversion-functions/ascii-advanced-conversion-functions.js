@@ -24,12 +24,14 @@ function decimalToAscii(blob) {
 
 /* Base 2 to ASCII */
 function binaryToAscii(blob) {
-  return String.fromCharCode(parseInt(blob.slice(2), 2));
+  // return String.fromCharCode(parseInt(blob.slice(2), 2));
+  return String.fromCharCode(blob);  //String.fromCharCode() works with prefix.
 }
 
 /* Base 16 to ASCII */
 function hexadecimalToAscii(blob) {
-  return String.fromCharCode(parseInt(blob, 16));
+  // return String.fromCharCode(parseInt(blob, 16));
+  return String.fromCharCode(blob);  //String.fromCharCode() works with prefix.
 }
 
 /* ASCII to base 10 */
