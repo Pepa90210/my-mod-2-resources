@@ -17,12 +17,13 @@ function decimalToHexadecimal(blob) {
 
 /* Base 2 to base 10 */
 function binaryToDecimal(blob) {
-  return parseInt(blob.slice(2), 2);
+  return parseInt(blob.slice(2), 2);  // parseInt does not like 0b prefix.
 }
 
 /* Base 16 to base 10 */
 function hexadecimalToDecimal(blob) {
-  return parseInt(blob.slice(2), 16);
+  // return parseInt(blob.slice(2), 16);
+  return parseInt(blob, 16);  //For some reason, parseInt ignores the 0x prefix.
 }
 
 // console.log('Decimal to binary:')
