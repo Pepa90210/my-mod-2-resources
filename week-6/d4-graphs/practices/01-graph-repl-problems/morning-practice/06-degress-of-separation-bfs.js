@@ -7,8 +7,34 @@ const adjList = {
   6: []
 }
 
+function aShortestPath(start, end) {
+  const queue = [[start]];
+  const visited = new Set([start]);
+
+  while (queue.length) {
+    // console.log(queue);
+    let cPath = queue.shift();
+    let lastNode = cPath[cPath.length - 1];
+
+    //DO THE THING
+    if (lastNode === end) return cPath;
+
+    for (let neighbor of adjList[lastNode]) {
+      if (!visited.has(neighbor)) {
+        visited.add(neighbor);
+        let copyPath = cPath.slice();
+        copyPath.push(neighbor);
+        queue.push(copyPath);
+      }
+    }
+  }
+  return false;
+}
+
 function degreesOfSeparation(start, end) {
-  // Your code here
+  let shortestPath = aShortestPath(start, end);
+  if (!shortestPath) return false;
+  return shortestPath.length - 1;
 }
 
 console.log("First Test:");

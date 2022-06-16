@@ -9,6 +9,25 @@ const adjList = {
 
 function printBreadthFirst(start) {
     // Paste your previous code here and refactor it
+    const queue = [start];
+    const visited = new Set();
+    visited.add(start);
+    const results = [];
+
+    while (queue.length) {
+        let currentNode = queue.shift();
+
+        results.push(currentNode);
+
+        for (let i = 0; i < adjList[currentNode].length; i++) {
+            let newNode = adjList[currentNode][i];
+            if (!visited.has(newNode)) {
+                visited.add(newNode);
+                queue.push(newNode);
+            }
+        }
+    }
+    console.log(results);
 }
 
 console.log("First Test:")

@@ -8,7 +8,23 @@ const adjList = {
 }
 
 function breadthFirstSearch(start, end) {
-  // Your code here
+  const queue = [start];
+  const visited = new Set([start]);
+
+  while (queue.length) {
+    let cn = queue.shift();
+
+    //DO THE THING
+    if (cn === end) return true;
+
+    for (let neighbor of adjList[cn]) {
+      if (!visited.has(neighbor)) {
+        queue.push(neighbor);
+        visited.add(neighbor);
+      }
+    }
+  }
+  return false;
 }
 
 console.log("First Test:");

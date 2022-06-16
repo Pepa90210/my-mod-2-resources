@@ -9,6 +9,23 @@ const adjList = {
 
 function printDepthFirst(start) {
     // your code here
+    let stack = [start];
+    let visited = new Set();
+    visited.add(start);
+
+    while (stack.length) {
+        let currentNode = stack.pop();
+
+        console.log(currentNode);
+
+        for (let i = 0; i < adjList[currentNode].length; i++) {
+            let newNode = adjList[currentNode][i];
+            if (!visited.has(newNode)) {
+                visited.add(newNode);
+                stack.push(newNode);
+            }
+        }
+    }
 }
 
 console.log("First Test:")
