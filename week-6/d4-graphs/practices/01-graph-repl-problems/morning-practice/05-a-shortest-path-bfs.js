@@ -22,9 +22,10 @@ function aShortestPath(start, end) {
     for (let neighbor of adjList[lastNode]) {
       if (!visited.has(neighbor)) {
         visited.add(neighbor);
-        let copyPath = cPath.slice();
-        copyPath.push(neighbor);
-        queue.push(copyPath);
+        // let copyPath = cPath.slice();
+        // copyPath.push(neighbor);
+        // queue.push(copyPath);
+        queue.push([...cPath, neighbor]);
       }
     }
   }
